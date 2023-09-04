@@ -52,7 +52,6 @@ ul#user_fields {
 }
 
 form {
-
     height: 80%;
 }
 
@@ -65,8 +64,11 @@ form {
 }
 
 li {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     padding-right: 100px;
+    justify-content: center;
+    height: 100%;
 }
 
 input, label {
@@ -76,6 +78,15 @@ input, label {
 
 input {
     border-radius: 3px;
+    border-color: #E5E7EB;
+    border-width: 1px;
+}
+
+input:focus {
+    outline: none;
+    border-color:blue;
+    box-shadow: 2px 2px 2px 1px rgba(206, 177, 177, 0.2);
+
 }
 
 
