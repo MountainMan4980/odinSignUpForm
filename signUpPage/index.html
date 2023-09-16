@@ -20,22 +20,35 @@
         <p>This is not a real service! Sign up now for accurate forecasts that include our fluffiness factor! We'll not only tell you how much snow but what skis to bring. No more struggling through mank on your skinny skis!</p>
         <form>
             <ul id="user_fields">
-                <li>
-                    <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" name="first_name" required>
-                    <label for="user_email">Email Address</label>
-                    <input type="email" id="user_email" name="email" placeholder="you@example.com" required>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
-                    
+                <li id="leftColumn">
+                    <div>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div>
+                        <label for="user_email">Email Address</label>
+                        <input type="email" id="user_email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="error" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                        <label for="password" id="errormessage">* Passwords do not match</label>    
+                    </div> 
                 </li>
-                <li>
-                    <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" name="last_name" required>
-                    <label for="user_phone_number">Phone Number</label>
-                    <input type="tel" id="user_phone_number" name="phone_number" placeholder="720-867-5309">
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="password" id="confirm_password" name="confirm_password" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                <li id="rightColumn">
+                    <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                    <div>
+                        <label for="user_phone_number">Phone Number</label>
+                        <input type="tel" id="user_phone_number" name="phone_number" placeholder="720-867-5309">
+                    </div>
+                    <div>
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" class="error" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                        <label for="confirm_password" id="placeholder">placeholder</label>
+                    </div>    
                 </li>
             </ul>
             <button type="submit" id="submit_button">Create Account</button>

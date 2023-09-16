@@ -46,7 +46,7 @@ ul#user_fields {
     height: 50%;
     background-color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0px 2px 2px 1px rgba(206, 177, 177, 0.2);
 }
@@ -67,8 +67,8 @@ li {
     display: flex;
     flex-direction: column;
     padding-right: 100px;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-around;
+    height: 90%;
 }
 
 input, label {
@@ -80,6 +80,7 @@ input {
     border-radius: 3px;
     border-color: #E5E7EB;
     border-width: 1px;
+    padding-top: 0px;
 }
 
 input:focus {
@@ -87,6 +88,12 @@ input:focus {
     border-color:blue;
     box-shadow: 2px 2px 2px 1px rgba(206, 177, 177, 0.2);
 
+}
+
+.error:focus {
+    outline: none;
+    border-color:blue;
+    box-shadow: 2px 2px 2px 1px rgba(206, 177, 177, 0.2);
 }
 
 
@@ -130,4 +137,36 @@ p#alreadyHaveAccount {
     margin-left: 40px;
 }
 
+.error:invalid ~ label {
+    color: red;
+}
+
+.error:valid ~ label {
+    color: white;
+}
+
+.error:valid {
+    border-color: #E5E7EB;
+}
+
+.error:focus {
+    border-color: blue;
+}
+
+input.error {
+    border-color: red;
+}
+
+
+label {
+    padding-bottom: 0px; 
+}
+
+label#placeholder {
+    color: white
+}
+
+#errormessage, #placeholder {
+    font-size: 10px;
+}
 
